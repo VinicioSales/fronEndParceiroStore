@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal com JavaScript</title>
+  <style>
+    /* Estilos para o modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão que abre o modal -->
+  <button id="openModalBtn">Abrir Modal</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Informações do Modal</h2>
+      <p>Aqui estão as informações do modal.</p>
+    </div>
+  </div>
+
+  <script>
+    // Função para abrir o modal
+    function openModal() {
+      const modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+      const modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+
+    // Event listener para o botão
+    const openModalBtn = document.getElementById("openModalBtn");
+    openModalBtn.addEventListener("click", openModal);
+
+    // Event listener para o botão de fechar
+    const closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.addEventListener("click", closeModal);
+  </script>
+</body>
+</html>
