@@ -75,7 +75,7 @@ nav.menu-superior {
 
 #carrinho_img {
     width: 35px;
-    margin-right: 45px;
+    margin-right: 30px;
 }
 
 .img_carrosel {
@@ -171,30 +171,43 @@ nav a:hover {
 }
 
 .finder {
-    background-color: #fff;
-    border: 5px solid lightgray;
+    background-color: #17009c;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finder button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #fff;
 }
 
 .finder p {
+    color: #fff;
     margin: 0;
-    line-height: 50px; /* substitua 50px pela altura do botão */
+    line-height: 1;
     text-align: center;
 }
 
 .retangulo {
     width: 200px;
     height: 300px;
-    background-color: RGB(148 210 222);
+    background-color: RGB(209 247 255);
     box-shadow: 0px 2px 4px RGB(110 155 164);
     transition: border-top 0.3s;
-    margin: 8px;    
+    margin: 10px;
+    display: flex;
+
 }
 
 .retangulo:hover {
@@ -204,10 +217,15 @@ nav a:hover {
 .retangulo span {
     display: block;
     text-align: center;
-    color: white;
+    color: rgb(7, 20, 131);
     font-size: 24px;
     padding-top: 25px;
+    padding-bottom: 10px;
 
+}
+
+.texto_retangulo {
+    color:rgb(18, 61, 155)
 }
 
 .product_description {
@@ -217,6 +235,9 @@ nav a:hover {
     align-items: center;
     text-align: center;
     margin: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
     
 }
 
@@ -232,18 +253,22 @@ ul.navegador_top {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-padding: 0;
+    padding: 0;
 }
 
 .botoes {
     background-color: rgb(18, 61, 155);
     color: white;
+    align-self: self-end;
     border: none;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin: auto;
+    margin: 10px;
+    margin-left: 65px;
+    position: absolute;
+
 }
 
 .modal {
@@ -265,6 +290,27 @@ padding: 0;
     border: 1px solid #888;
 }
 
+
+.forms {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo com transparência */
+}
+
+.modalFormsContent {
+    background-color: #fff;
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 .close {
     color: #aaa;
     float: right;

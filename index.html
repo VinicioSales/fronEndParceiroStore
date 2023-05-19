@@ -7,6 +7,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./style.css" />
 		<script src="./script.js" defer></script>
 		<title>Site Parceiro</title>
@@ -57,7 +60,7 @@
         
         <div id="myModal" class="modal">
             <div class="modal-content">
-                
+                <button class="close">X</button>
                 <h2>Configurador NCM</h2>
                 <p>Este robô realiza o cadastro automatizado de todos os NCMs, de acordo com uma planilha,</p>
                 <p/>eliminando a necessidade de intervenção humana. Essa automatização otimiza a utilização </p>
@@ -65,61 +68,94 @@
                 <p>tempo ganho para outras atividades.</p>
                 </div>
             </div>
+            <div id="modalForms" class="forms">
+              <div class="modalFormsContent">
+                <span>Fale com um dos nossos representantes</span>
+                <form>
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name" name="name" required>
+                  <br>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                  <br>
+                  <button type="submit">Enviar</button>
+                </form>
+                <button id="closeModalFormsBtn">Fechar</button>
+              </div>
+            </div>
 
 		<div class="main_div">
-			<div class="finder" id="openModalBtn2">
+			<div class="finder" id="openModalFormsBtn">
 				<button>Call</button>
 			</div>
             </div>
             <div class = "products">
                 <div class="retangulo">
-                    <span>Configurador NCM</span>
-                    <p class="product_description">Configura o NCM dos produtos, na sua base</p>
-                    <p class="product_description">R$ 315,00</p>
+                    <div class="texto_retangulo">
+                        <span>Configurador NCM</span>
+                        <p class="product_description">Configura o NCM dos produtos, na sua base</p>
+                        <p class="product_description">R$ 315,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
                 
                 <div class="retangulo">
-                    <span>Concilador Bancário</span>
-                    <p class="product_description">Faz a conciliação bancário na sua empresa, baseado no seu ofx</p>
-                    <p class="product_description">R$ 345,00</p>
+                    <div class="texto_retangulo">
+                        <span>Concilador Bancário</span>
+                        <p class="product_description">Faz a conciliação bancário na sua empresa, baseado no seu ofx</p>
+                        <p class="product_description">R$ 345,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
+
                 <div class="retangulo">
-                    <span>Configurador de impostos</span>
-                    <p class="product_description">Configura todos os impostos de seus produtos</p>
-                    <p class="product_description">R$ 457,00</p>
-                    <button id="openModalBtn" class="botoes">Comprar</button>
-                </div>
-                <div class="retangulo">
-                    <span>Controle de estoque</span>
-                    <p class="product_description">Faz saídas e entradas dos seus estoques</p>
-                    <p class="product_description">R$ 354,00</p>
-                    <button id="openModalBtn" class="botoes">Comprar</button>
-                </div>
-                <div class="retangulo">
-                    <span>Configurador de categorias</span>
-                    <p class="product_description">Automação que entra no site da Omie e configura as categorias financeiras de acordo com umas planilha importada</p>
-                    <p class="product_description">R$ 545,00</p>
+                    <div class="texto_retangulo">
+                        <span>Configurador impostos</span>
+                        <p class="product_description">Configura todos os impostos de seus produtos</p>
+                        <p class="product_description">R$ 457,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
                 
                 <div class="retangulo">
-                    <span>Ativador Onvio</span>
-                    <p class="product_description">Automação que ativa os clientes de uma contabilidade dentro do sistema Onvio</p>
-                    <p class="product_description">R$ 300,00</p>
+                    <div class="texto_retangulo">
+                        <span>Controle de estoque</span>
+                        <p class="product_description">Faz saídas e entradas dos seus estoques</p>
+                        <p class="product_description">R$ 354,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
                 <div class="retangulo">
-                    <span>Gerador de Pix</span>
-                    <p class="product_description">Automação que gera um pix através de um Conta a receber cadastrado no sistema Omie</p>
-                    <p class="product_description">R$ 720,00</p>
+                    <div class="texto_retangulo">
+                        <span>Configurador categorias</span>
+                        <p class="product_description">Automação que entra no site da Omie e configura as categorias financeiras de acordo com umas planilha importada</p>
+                        <p class="product_description">R$ 545,00</p>
+                    </div>
+                    <button id="openModalBtn" class="botoes">Comprar</button>
+                </div>
+                
+                <div class="retangulo">
+                    <div class="texto_retangulo">
+                        <span>Ativador Onvio</span>
+                        <p class="product_description">Automação que ativa os clientes de uma contabilidade dentro do sistema Onvio</p>
+                        <p class="product_description">R$ 300,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
                 <div class="retangulo">
-                    <span>Criador de pastas Onvio</span>
-                    <p class="product_description">Cria pastas dentro do sistema Onvio</p>
-                    <p class="product_description">R$ 450,00</p>
+                    <div class="texto_retangulo">
+                        <span>Gerador de Pix</span>
+                        <p class="product_description">Automação que gera um pix através de um Conta a receber cadastrado no sistema Omie</p>
+                        <p class="product_description">R$ 720,00</p>
+                    </div>
+                    <button id="openModalBtn" class="botoes">Comprar</button>
+                </div>
+                <div class="retangulo">
+                    <div class="texto_retangulo">
+                        <span>Criador de pastas Onvio</span>
+                        <p class="product_description">Cria pastas dentro do sistema Onvio</p>
+                        <p class="product_description">R$ 450,00</p>
+                    </div>
                     <button id="openModalBtn" class="botoes">Comprar</button>
                 </div>
                 </div>
